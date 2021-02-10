@@ -1,0 +1,130 @@
+.logo{
+    width :58%;
+    padding-left: 10px;
+}
+
+.nav{
+    display: flex;
+    width : 38%;
+    padding-right: 10px;
+}
+.navitem{
+    padding : 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    height: 1m;
+    background-color: grey;
+}
+
+.stat-global{
+    height: 130px;
+    width: 90%;
+
+    margin: auto;
+    margin-top: 20px;
+    
+    border: 2px solid grey;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    flex: 1 0 10%; 
+    margin: 10px;
+    height: 110px;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    
+}
+
+.boxTop{
+    height: 70%;
+
+    border-top-right-radius:.25rem ;
+    border-top-left-radius: .25rem;
+
+}
+.boxBot{
+    height: 30%;
+    border-bottom-right-radius:.25rem ;
+    border-bottom-left-radius: .25rem;
+    padding-top: 5px;
+    
+}
+#confirmed {
+    color :#e53e3e;
+}
+#recovered{
+    color :#38a169 ;
+}
+#death{
+    color :#718096 ;
+}
+#active{
+    color : #ff6600;
+}
+#boxTopConfirmed{
+    background-color: #fff5f5;
+}
+#boxBotConfirmed{
+    background-color: #fed7d7;
+}
+#boxTopRecovered{
+    background-color: #f0fff4;
+}
+#boxBotRecovered{
+    background-color: #c6f6d5;
+}
+#boxTopDeath{
+    background-color: #edf2f7;
+}
+#boxBotDeath{
+    background-color: #e2e8f0;
+}
+
+#boxTopActive{
+    background-color: #ffcc80;
+}
+#boxBotActive{
+    background-color: #ffb84d;
+}
+
+
+
+
+.container {
+
+    padding-top:40px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    border: 1px solid ;
+    flex: 1 0 21%; 
+    margin: 30px;
+    height: 400px;
+    width :40%
+    
+}
+.itemTop{
+    border-bottom: 1px solid ;
+    height: 25%;
+    background-color: red;
+}
+.itemBot{
+    height: 75%;
+    background-color: blue;
+    border-bottom: 1px solid ;
+}
