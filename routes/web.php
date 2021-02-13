@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('page2');
+    return view('layouts/page2');
 });
+
+Route::get('/country/{country}', 'App\Http\Controllers\ApiController@barre');
