@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts/page2');
 });
-Route::get('/graph', function () {
-    return view('graph');
-});
+
+
+Route::get('/graph', 'App\Http\Controllers\StatisticsController@StatData');
 
 Route::get('/country/{country}', 'App\Http\Controllers\ApiController@main');
 Route::get('/country', 'App\Http\Controllers\ApiController@main');
