@@ -33,12 +33,16 @@ header {
 
     display: flex;
     flex-wrap: wrap;
+
+    border-radius: .35rem ;
+
 }
 .box{
     flex: 1 0 10%; 
     margin: 10px;
     height: 110px;
     text-align: center;
+    
 
     font-weight: 700;
     font-size: 1.125rem;
@@ -54,6 +58,8 @@ header {
     border-top-right-radius:.25rem ;
     border-top-left-radius: .25rem;
     position: relative;
+
+    
 }
 .big{
     font-size: 1.5rem;
@@ -99,7 +105,7 @@ header {
     background-color: #edf2f7;
 }
 #boxBotDeath{
-    background-color: #e2e8f0;
+    background-color: #ccd7e5;
 }
 
 #boxTopActive{
@@ -108,9 +114,6 @@ header {
 #boxBotActive{
     background-color: #ffb84d;
 }
-
-
-
 
 .container {
 
@@ -172,4 +175,22 @@ header {
     border-radius:30%;
     max-width:45px;
     
+}
+
+.graph_container{
+    width : 50%;
+    border: 1px solid blue;
+
+    
+}
+.graph{
+    border: 1px solid red;
+    margin : 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#type{
+    width: 70%;
+
 }

@@ -69,7 +69,7 @@ class StatisticsController extends Controller
                 array_push($NewDeaths,$value["new_deaths"]);
                 array_push($active,$value["active"]);
             }
-            //dd($date);
+            //dd($NewRecovred);
             $StatArray = array($date,$TotalCases,$TotalDeaths,$TotalRecovred,$NewCases,$NewRecovred,$NewDeaths,$active);
             //dd($StatArray);
         }
