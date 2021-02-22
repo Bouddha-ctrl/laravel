@@ -55,7 +55,9 @@ class StatisticsController extends Controller
         } else {
             $ss =json_decode($response);
             $array = json_decode(json_encode($ss), true);
+            
             $array = $array["data"]["timeline"];
+            
             $array = array_reverse($array);
             foreach ($array as $value)
             {
@@ -72,8 +74,8 @@ class StatisticsController extends Controller
             //dd($NewRecovred);
             $StatArray = array($date,$TotalCases,$TotalDeaths,$TotalRecovred,$NewCases,$NewRecovred,$NewDeaths,$active);
             //dd($StatArray);
-        }
-        return view('graph', [
+        }   
+        return view('graph2', [
             'StatArray' => $StatArray,
         ]);
     }

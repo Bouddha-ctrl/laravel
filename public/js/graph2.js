@@ -1,37 +1,79 @@
 
 
-var type=0;
 var data = document.currentScript.getAttribute('data');
 data = JSON.parse(data);
 
-var Titles = [['New cases','#fdb4b4'], ['New recovered','#c6f6d5'], ['New deaths','#ccd7e5']];
+var Titles = [['#fdb4b4'], ['New recovred','#c6f6d5'], ['New deaths','#ccd7e5']];
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     
     data: {
         
         labels: data[0],
         datasets: [{
             
-            label: Titles[type][0],
-            data: data[4],
+            label: "Confirmed",
+            data: data[1],
             fill : false,
             backgroundColor: 
-                Titles[type][1]
+                '#fdb4b4'
             ,
-
             hoverBackgroundColor: 
             'rgba(240, 52, 52, 1)',
-            
-            borderWidth: 1
-            
-        }]
+            pointRadius: 0,
+            borderWidth: 2,
+            borderColor: '#fdb4b4'
+
+        },
+        {
+            label: "Deaths",
+            data: data[2],
+            fill : false,
+            backgroundColor: 
+                '#ccd7e5'
+            ,
+            hoverBackgroundColor: 
+            'rgba(240, 52, 52, 1)',
+            pointRadius: 0,
+            borderWidth: 2,
+            borderColor: '#ccd7e5'
+
+        },
+        {
+            label: "Recovered",
+            data: data[3],
+            fill : false,
+            backgroundColor: 
+                '#c6f6d5'
+            ,
+            hoverBackgroundColor: 
+            'rgba(240, 52, 52, 1)',
+            pointRadius: 0,
+            borderWidth: 2,
+            borderColor: '#c6f6d5'
+
+        },
+        {
+            label: "Actives",
+            data: data[7],
+            fill : false,
+            backgroundColor: 
+                '#ffcc80'
+            ,
+            hoverBackgroundColor: 
+            'rgba(240, 52, 52, 1)',
+            pointRadius: 0,
+            borderWidth: 2,
+            borderColor: '#ffcc80'
+
+        }
+        ]
     },
     options: {
         legend : {
-            display: false
+            
         },
         responsive: false,
         tooltips: {
@@ -58,6 +100,8 @@ var myChart = new Chart(ctx, {
                     zeroLineWidth:1,
                     borderColor : 'rgba(200, 0, 0, 1)',
                     borderWidth: 10,
+                    
+                    drawTicks: false
                 },
             }],
             xAxes: [{ 
@@ -76,18 +120,3 @@ var myChart = new Chart(ctx, {
     }
 });
 
-
-function OnSelectionChange()
-{
-    var e = document.getElementById("type");
-    type = e.value;
-    type=parseInt(type);
-    console.log(type);
-    
-    myChart.data.datasets.forEach((dataset) => {
-        dataset.data= data[type+4];
-        dataset.label= Titles[type][0];
-        dataset.backgroundColor = Titles[type][1];
-    });
-    myChart.update();
-}
