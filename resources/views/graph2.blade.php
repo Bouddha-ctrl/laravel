@@ -11,7 +11,7 @@
     <div class="graph">  
 
         
-        <canvas id="myChart" width="600" height="420"></canvas>
+        <canvas id="myChart2" width="600" height="420"></canvas>
         <script src="/js/graph2.js" data={{json_encode($StatArray)}}></script>
 
     </div>

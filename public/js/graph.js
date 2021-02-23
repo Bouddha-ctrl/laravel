@@ -4,9 +4,9 @@ var type=0;
 var data = document.currentScript.getAttribute('data');
 data = JSON.parse(data);
 
-var Titles = [['New cases','#fdb4b4'], ['New recovered','#c6f6d5'], ['New deaths','#ccd7e5']];
+var Titles = [['New cases','#fdb4b4'], ['New recovered','#a7f1be'], ['New deaths','#bdbfc1']];
 
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('myChart1').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     
@@ -77,12 +77,11 @@ var myChart = new Chart(ctx, {
 });
 
 
-function OnSelectionChange()
+function OnSelectionChangeGraph()
 {
     var e = document.getElementById("type");
     type = e.value;
     type=parseInt(type);
-    console.log(type);
     
     myChart.data.datasets.forEach((dataset) => {
         dataset.data= data[type+4];

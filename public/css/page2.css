@@ -21,20 +21,31 @@ header {
     background-color: grey;
 }
 
+body{
+    margin :0;
+}
+
+main{
+    background-color: #f5f5f0;
+}
+.barre{
+    padding-top: 20px;
+}
 .stat-global{
     height: 130px;
-    width: 90%;
+    width: 93.8%;
 
     margin: auto;
-    margin-top: 20px;
+    background-color: white;
     
-    border: 2px solid grey;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 5%);
     padding: 10px;
 
     display: flex;
     flex-wrap: wrap;
 
-    border-radius: .35rem ;
+    border-radius: 6px;
 
 }
 .box{
@@ -57,6 +68,8 @@ header {
     align-items: center;
     border-top-right-radius:.25rem ;
     border-top-left-radius: .25rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0px;
     position: relative;
 
     
@@ -117,33 +130,38 @@ header {
 
 .container {
 
-    padding-top:40px;
+    padding:20px;
     
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: left;
+    flex-direction: row;
+    align-items: center;
 }
 .item{
-    border: 1px solid ;
     flex: 1 0 21%; 
-    margin: 30px;
-    margin-left:100px;
-    height: 400px;
+    margin :10px;
+    
+    height: 550px;
     width :40%
     
 }
 .itemTop{
-    border-bottom: 1px solid ;
-    height: 25%;
-    background-color: red;
-}
-.itemBot{
-    height: 75%;
-    background-color: blue;
-    border-bottom: 1px solid ;
+    height: 6%;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    color : #333333;
+    font-weight: 600;
+    font-size: 17;
+    padding-left: 7px;
 }
 
+.itemBot{
+    border-radius: 6px;
+    height: 92%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 5%);
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
 
 .combobox{
     width: 100%;
@@ -177,20 +195,21 @@ header {
     
 }
 
-.graph_container{
-    width : 50%;
-    border: 1px solid blue;
-
+.graph1{
     
-}
-.graph{
-    border: 1px solid red;
-    margin : 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#type{
+.type{
+    width: 100%;
+}
+.form-select{
+    padding: 10px;
     width: 70%;
+    align-items: center;
+}
 
+.graph2{
+    padding-top: 20px;
 }

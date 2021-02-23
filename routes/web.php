@@ -18,8 +18,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/graph', 'App\Http\Controllers\StatisticsController@StatData');
-Route::get('/graph2', 'App\Http\Controllers\StatisticsController@StatData');
-
 Route::get('/country/{country}', 'App\Http\Controllers\ApiController@main');
 Route::get('/country', 'App\Http\Controllers\ApiController@main');

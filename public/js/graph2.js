@@ -3,10 +3,16 @@
 var data = document.currentScript.getAttribute('data');
 data = JSON.parse(data);
 
-var Titles = [['#fdb4b4'], ['New recovred','#c6f6d5'], ['New deaths','#ccd7e5']];
+var ctx = document.getElementById('myChart2').getContext('2d');
 
-var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
+    plugins: [{
+        beforeInit: function(chart, options) {
+            chart.legend.afterFit = function() {
+                this.height = this.height + 10;
+            };
+        }
+    }],
     type: 'line',
     
     data: {
@@ -18,13 +24,26 @@ var myChart = new Chart(ctx, {
             data: data[1],
             fill : false,
             backgroundColor: 
-                '#fdb4b4'
+                '#fed7d7'
             ,
             hoverBackgroundColor: 
             'rgba(240, 52, 52, 1)',
             pointRadius: 0,
             borderWidth: 2,
-            borderColor: '#fdb4b4'
+            borderColor: '#fdb4b4',
+        },
+        {
+            label: "Recovered",
+            data: data[3],
+            fill : false,
+            backgroundColor: 
+                '#c6f6d5'
+            ,
+            hoverBackgroundColor: 
+            'rgba(240, 52, 52, 1)',
+            pointRadius: 0,
+            borderWidth: 2,
+            borderColor: '#a7f1be'
 
         },
         {
@@ -38,21 +57,7 @@ var myChart = new Chart(ctx, {
             'rgba(240, 52, 52, 1)',
             pointRadius: 0,
             borderWidth: 2,
-            borderColor: '#ccd7e5'
-
-        },
-        {
-            label: "Recovered",
-            data: data[3],
-            fill : false,
-            backgroundColor: 
-                '#c6f6d5'
-            ,
-            hoverBackgroundColor: 
-            'rgba(240, 52, 52, 1)',
-            pointRadius: 0,
-            borderWidth: 2,
-            borderColor: '#c6f6d5'
+            borderColor: '#bdbfc1'
 
         },
         {
@@ -66,19 +71,21 @@ var myChart = new Chart(ctx, {
             'rgba(240, 52, 52, 1)',
             pointRadius: 0,
             borderWidth: 2,
-            borderColor: '#ffcc80'
-
+            borderColor: '#ffb84d',
         }
         ]
     },
     options: {
-        legend : {
-            
+
+        legend : {  
+            labels: {   
+                usePointStyle: true,
+            },
         },
         responsive: false,
         tooltips: {
-        mode: 'index',
-        intersect: false
+            mode: 'index',
+            intersect: false
         },
         hover: {
             mode: 'index',
@@ -101,7 +108,6 @@ var myChart = new Chart(ctx, {
                     borderColor : 'rgba(200, 0, 0, 1)',
                     borderWidth: 10,
                     
-                    drawTicks: false
                 },
             }],
             xAxes: [{ 

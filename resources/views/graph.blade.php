@@ -5,15 +5,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
 </head>
-<?php 
 
-?>
 <div class="graph_container">
-    <div class="graph">  
+    <div class="graph1">  
 
         <form action="">
             <select id="type"  onchange="OnSelectionChange()">
-
 
                             <option value="0" selected>New cases</option>
                             <option value="1" >New recovred</option>
