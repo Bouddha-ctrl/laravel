@@ -178,6 +178,7 @@ class ApiController extends Controller
         //echo $country;
         
         $DefaultCountry = $this->getLocation();
+        $DefaultCountry = 'Global';    //change , GeoIP not used
 
         if ($country=='j') {
             $country=$DefaultCountry;

@@ -12,13 +12,14 @@
     <title>statistique</title>
 </head>
 <body>
-    <header class="site-header">
+    <header class="site-header"> 
         <div class="logo">
-            <h2>CORONA Extra</h2>
+            <h2>COVID-19 </h2>
+            <h2 style="padding-left:4px;color: blue;"> Tracker</h2>
         </div>
         <nav class="nav">
-            <div class="navItem">Page 1</div>
-            <div class="navItem">Page 2</div>
+            <div class="navItem"></div>
+            <div class="navItem"></div>
         </nav>
     </header>
 
