@@ -21,7 +21,6 @@
         <div class="barre"> 
             @yield('barre')
         </div>
-        
         <div class="container"> 
             <div class="item">
                 <div class="itemTop">
@@ -41,6 +40,18 @@
             </div>
             
         </div>
+
+        <div >
+            @if ($CurCountry=="Global")
+                <div class="table_title">
+                    Statistic per country 
+                </div>
+                @yield('table')
+            @endif
+        </div>
     </main>
+    <footer>
+        @yield('footer')
+    </footer>
 </body>
 </html>

@@ -35,8 +35,8 @@ var myChart = new Chart(ctx, {
         },
         responsive: false,
         tooltips: {
-        mode: 'index',
-        intersect: false
+            mode: 'index',
+            intersect: false
         },
         hover: {
             mode: 'index',
@@ -47,6 +47,8 @@ var myChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     callback: function(label, index, labels) {
+                        if (label >= 1000000)
+                            return label/1000000+'M';
                         if (label >= 1000) 
                             return label/1000+'k';
                         return label;

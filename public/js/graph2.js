@@ -76,7 +76,6 @@ var myChart = new Chart(ctx, {
         ]
     },
     options: {
-
         legend : {  
             labels: {   
                 usePointStyle: true,
@@ -96,8 +95,11 @@ var myChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     callback: function(label, index, labels) {
+                        if (label >= 1000000)
+                            return label/1000000+'M';
                         if (label >= 1000) 
                             return label/1000+'k';
+
                         return label;
                     },
                     beginAtZero: true,
@@ -111,7 +113,6 @@ var myChart = new Chart(ctx, {
                 },
             }],
             xAxes: [{ 
-                
                 ticks: {
                     autoSkip: true,
                     maxTicksLimit: 18

@@ -133,7 +133,7 @@
 
     <div class="graph1">  
         <div class="form-select">
-            <form action="" >
+            <form action="" id="form">
                 <select id="type"  onchange="OnSelectionChangeGraph()">
 
                                 <option value="0" selected>New cases</option>
@@ -151,11 +151,97 @@
     
 @endsection
 
+
 @section('graph2')
-<div class="graph2">  
+<div class="graph2">
         
     <canvas id="myChart2" width="600" height="454"></canvas>
     <script src="/js/graph2.js" data={{json_encode($StatArray)}}></script>
 
 </div>
 @endsection
+
+
+
+@section('table')
+<div class="table-div">
+    
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Country</th>
+                <th>Total Cases</th>
+                <th>New Cases</th>
+                <th>Total Deaths</th>
+                <th>New Deaths</th>
+                <th>Total Recovered</th>
+                <th>New Recovered</th>
+                <th>Active Cases</th>
+                <th>Serious_Critical</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php
+                $count = 1;
+            ?>
+            @foreach($json as $countries)
+                
+                <tr>
+                    <td  class="ranking_table">{{$count}}</td>
+                    
+                    <td class='country_table'><a href="/country/{{$countries->Country}}"> {{$countries->Country}} </a></td>
+                    
+                    <td> {{number_format ($countries->TotalCases)}} </td>
+                    
+                    @if ($countries->NewCases >0)
+                        <td style="background-color:#FFEEAA;">
+                            +{{number_format($countries->NewCases)}}
+                        </td> 
+                    @else 
+                        <td></td>   
+                    @endif
+                    
+                    <td> {{number_format($countries->TotalDeaths)}} </td>
+
+                    @if ($countries->NewDeaths >0)
+                        <td style="background-color:red;color:white">
+                            +{{number_format($countries->NewDeaths)}}
+                        </td>    
+                    @else 
+                        <td></td>
+                    @endif
+
+                    <td> {{number_format($countries->TotalRecovered)}} </td>
+
+                    @if ($countries->NewRecovered >0)
+                        <td style="background-color:#c8e6c9;">
+                            +{{number_format($countries->NewRecovered)}}
+                        </td>
+                    @else 
+                        <td></td>
+                    @endif
+
+                    <td> {{number_format($countries->ActiveCases)}} </td>
+                    <td> {{number_format($countries->Serious_Critical)}} </td>
+
+                </tr>
+                <?php
+                    $count+=1;
+                ?>            
+            @endforeach
+        </tbody>
+    </table>
+</div>
+    
+@endsection
+
+
+@section('footer')
+    <div class="footer">
+
+    </div>
+@endsection
+
+

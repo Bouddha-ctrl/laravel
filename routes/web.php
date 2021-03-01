@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::get('/country/{country}', 'App\Http\Controllers\ApiController@main');
 Route::get('/country', 'App\Http\Controllers\ApiController@main');
+
+  
