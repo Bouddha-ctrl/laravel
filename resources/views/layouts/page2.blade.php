@@ -1,3 +1,9 @@
+<?php
+    $CurCountry = $_SERVER['REQUEST_URI'];
+    $CurCountry=explode('/',$CurCountry);
+    $CurCountry=end($CurCountry);
+    $CurCountry=str_replace("%20"," ",$CurCountry);
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +52,9 @@
                 <div class="table_title">
                     Statistic per country 
                 </div>
-                @yield('table')
+                @if ($CurCountry=='Global')
+                    @yield('table')
+                @endif
             
         </div>
     </main>
