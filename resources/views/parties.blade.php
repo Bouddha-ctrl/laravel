@@ -237,6 +237,40 @@
     
 @endsection
 
+@section('news')
+<div id="contenu">
+
+
+    <section >
+        <?php $NewCounter=0;?>
+        @foreach ($newsdata as $news )
+
+            <?php 
+                if ($NewCounter==10)
+                    break;
+
+            $NewCounter++;?>
+            <div class="news">
+                <div class="img">
+                    <img class="imagNews" src="{{$news['urlToImage']}}" alt="" width="100" height="100">
+                </div> 
+                <div class="reste">
+                    <a class='ahref' href="{{ $news['url'] }}">{{$news['title']}} </a>  
+                    <br/>
+                    <span class="description"> {{ $news['description'] }} </span>
+                </div>
+            </div>
+            <br>    
+
+        @endforeach
+
+    </section>
+
+
+</div>
+    
+@endsection
+
 
 @section('footer')
     <div class="footer">

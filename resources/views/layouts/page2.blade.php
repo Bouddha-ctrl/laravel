@@ -49,13 +49,16 @@
         </div>
 
         <div >
-            
+            @if ($CurCountry=='Global')
                 <div class="table_title">
                     Statistic per country 
                 </div>
-                @if ($CurCountry=='Global')
-                    @yield('table')
-                @endif
+                @yield('table')
+            @else
+                <div class="BigNews">
+                    @yield('news')
+                </div>
+            @endif
             
         </div>
     </main>

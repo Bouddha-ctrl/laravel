@@ -155,7 +155,7 @@ main{
     padding-left: 7px;
 }
 
-.itemBot{
+.itemBot , .BigNews{
     border-radius: 6px;
     height: 92%;
     background-color: white;
@@ -265,6 +265,25 @@ a:Visited , a:link{
     color: #337ab7;
 }
 
+
+.BigNews{
+    height: 100%;
+    margin :10px;
+    padding: 10px;
+}
+.news{
+    display:flex;
+}
+.img{
+    width: 10%;
+}
+.reste{
+    width: 90%;
+
+}
+.imagNews{
+    border-radius: 6px;
+}
 
 footer{
     height: 15px;

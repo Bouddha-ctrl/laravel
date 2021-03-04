@@ -84,7 +84,16 @@ var myChart = new Chart(ctx, {
         responsive: false,
         tooltips: {
             mode: 'index',
-            intersect: false
+            intersect: false,
+            callbacks: {
+                label: function(tooltipItem, data) {
+
+                    let label = data.datasets[tooltipItem.datasetIndex].label;
+                    let value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                    return  label +' : '+ String(value).replace(/(.)(?=(\d{3})+$)/g,'$1,')
+
+                }
+            },
         },
         hover: {
             mode: 'index',
