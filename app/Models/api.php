@@ -23,7 +23,7 @@ class Api extends Model
 
               $content       = json_decode($apiRequest->getBody()->getContents(), true);
 
-             return $content['articles'];
+            return $content['articles'];
 
              /*
              $url = 'https://newsapi.org/v2/everything?q=covid19&apiKey=d047dbe5c31b47a995f5cb00949f1e4b';

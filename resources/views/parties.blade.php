@@ -49,8 +49,11 @@
 
         <div class="boxBot" >
             <form action="">
-                <select id="country" class="combobox" onchange="OnSelectionChangeBarre()">
-                        
+
+
+                    <input list="ListCountry" class="countryCombo" id="countryCombo" placeholder="{{$CurCountry}}" onchange="OnSelectionChangeBarre()"/>
+                    <datalist id="ListCountry">
+                        <option value={{$MyCountry}}>My Country</option>
                         @foreach ( $countries as $key=>$value)
                             @if ($key==$CurCountry)
                                 <option value="{{$key}}" selected>{{$key}}</option>
@@ -58,8 +61,8 @@
                                 <option value="{{$key}}">{{$key}}</option>
                             @endif
                         @endforeach
-
-                </select>
+                    </datalist>
+                
             </form>
         </div>
     </div>
@@ -137,7 +140,7 @@
                 <select id="type"  onchange="OnSelectionChangeGraph()">
 
                                 <option value="0" selected>New cases</option>
-                                <option value="1" >New recovred</option>
+                                <option value="1" >New recovered</option>
                                 <option value="2" >New deaths</option>
 
                 </select>
@@ -242,25 +245,31 @@
 
 
     <section >
-        <?php $NewCounter=0;?>
+        <?php $NewsCounter=0;
+            $MaxNews = 10;
+        ?>
         @foreach ($newsdata as $news )
 
             <?php 
-                if ($NewCounter==10)
+                if ($NewsCounter==$MaxNews)
                     break;
 
-            $NewCounter++;?>
-            <div class="news">
-                <div class="img">
-                    <img class="imagNews" src="{{$news['urlToImage']}}" alt="" width="100" height="100">
-                </div> 
-                <div class="reste">
-                    <a class='ahref' href="{{ $news['url'] }}">{{$news['title']}} </a>  
-                    <br/>
-                    <span class="description"> {{ $news['description'] }} </span>
+            $NewsCounter++;?>
+            <a class='ahref' target="_blank" href="{{ $news['url'] }}">
+                <div class="news">
+                    <div class="img">
+                        <img class="imagNews" src="{{$news['urlToImage']}}" alt="NewsImage">
+                    </div> 
+                    <div class="reste">
+                        <span class="NewsTitle" >{{$news['title']}}   </span>
+                        <br/>
+                        <span class="description"> {{ $news['description'] }} </span>
+                    </div>
                 </div>
-            </div>
-            <br>    
+            </a>
+            <br/>
+            <hr/>
+            <br/>    
 
         @endforeach
 

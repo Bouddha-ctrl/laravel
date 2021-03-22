@@ -23,7 +23,7 @@ class ApiController extends Controller
     {
         $ip = $_SERVER['REMOTE_ADDR'];
         $ip = '83.56.131.20'; //spain
-        $ip = '41.143.104.26'; //morocco
+        //$ip = '41.143.104.26'; //morocco
         $a=(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip))['geoplugin_countryName' ]);
         return $a;
     }
@@ -41,10 +41,10 @@ class ApiController extends Controller
         $api = new Api;
         $iso2 = $countries[$country][1];
         if (in_array($iso2,$liste)){
-            $data= $api->getNews($iso2);
+            $data= array($api->getNews($iso2),"country");
         }
         else {
-            $data= $api->getAllNewsCovid();
+            $data= array($api->getAllNewsCovid(),"global");
         }
         
         return $data;
@@ -221,13 +221,17 @@ class ApiController extends Controller
         $StatArray = $this->StatData($country);
         $tableArray = $this->tableData();
         $news = $this->newsapi($country);
+
+        $MyCountry = $this->getLocation();
         
         //print_r($news);
         return view('parties', [
+            'MyCountry' => $MyCountry,
             'data' => $barreArray,
             'StatArray' => $StatArray,
             'json' => $tableArray,
-            'newsdata' => $news,
+            'newsdata' => $news[0],
+            'checknews' => $news[1]
 
         ]);
 

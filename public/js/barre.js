@@ -1,8 +1,13 @@
 
 function OnSelectionChangeBarre()
     {
-        var e = document.getElementById("country");
+        var e = document.getElementById("countryCombo");
         var strUser = e.value;
         //alert("/country/"+strUser);
-        window.location.replace("/country/"+strUser);
+        RedirectTo(strUser);
+    }
+
+function RedirectTo(input)
+    {
+        window.location.replace("/country/"+input);
     }

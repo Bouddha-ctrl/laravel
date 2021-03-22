@@ -28,6 +28,7 @@
         <div class="barre"> 
             @yield('barre')
         </div>
+
         <div class="container"> 
             <div class="item">
                 <div class="itemTop">
@@ -55,13 +56,22 @@
                 </div>
                 @yield('table')
             @else
+                <div class="table_title">
+                    @if ($checknews =="global")
+                        Global Corona virus News 
+                    @else
+                        {{$CurCountry}} health News
+                    @endif
+                </div>
                 <div class="BigNews">
                     @yield('news')
                 </div>
             @endif
             
         </div>
+        <div style="height: 1px"></div>
     </main>
+
     <footer>
         @yield('footer')
     </footer>
