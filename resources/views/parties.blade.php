@@ -1,4 +1,4 @@
-@extends('layouts/page2',['checknews'=> $checknews])
+@extends('layouts/page2' )
 
 @section('barre')
 
@@ -241,10 +241,16 @@
 @endsection
 
 @section('news')
+<div class="table_title">
+    @if ($checknews =="global")
+        Global Corona virus News 
+    @else
+        {{$CurCountry}} health News
+    @endif
+</div>
+<div class="BigNews">
 <div id="contenu">
 
-
-    <section >
         <?php $NewsCounter=0;
             $MaxNews = 10;
         ?>
@@ -273,11 +279,11 @@
 
         @endforeach
 
-    </section>
+
 
 
 </div>
-    
+</div>
 @endsection
 
 
