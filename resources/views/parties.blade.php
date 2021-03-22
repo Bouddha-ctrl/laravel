@@ -139,9 +139,9 @@
             <form action="" id="form">
                 <select id="type"  onchange="OnSelectionChangeGraph()">
 
-                                <option value="0" selected>New cases</option>
-                                <option value="1" >New recovered</option>
-                                <option value="2" >New deaths</option>
+                                <option class="myoption" value="0" selected>New cases</option>
+                                <option class="myoption" value="1" >New recovered</option>
+                                <option class="myoption" value="2" >New deaths</option>
 
                 </select>
             </form>
