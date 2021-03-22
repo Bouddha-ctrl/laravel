@@ -1,4 +1,4 @@
-@extends('layouts/page2')
+@extends('layouts/page2',['checknews'=> $checknews])
 
 @section('barre')
 
