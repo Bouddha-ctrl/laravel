@@ -58,7 +58,6 @@
             @else
                 <div class="table_title">
                         Global Corona virus News 
-                    
                 </div>
                 <div class="BigNews">
                     @yield('news')
