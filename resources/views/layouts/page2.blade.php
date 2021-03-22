@@ -57,11 +57,8 @@
                 @yield('table')
             @else
                 <div class="table_title">
-                    @if ($checknews =="global")
                         Global Corona virus News 
-                    @else
-                        {{$CurCountry}} health News
-                    @endif
+                    
                 </div>
                 <div class="BigNews">
                     @yield('news')
