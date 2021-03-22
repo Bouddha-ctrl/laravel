@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/page2.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <title>statistique</title>
+    <title>Statistique</title>
 </head>
 <body>
     <header class="site-header"> 
@@ -32,7 +32,7 @@
         <div class="container"> 
             <div class="item">
                 <div class="itemTop">
-                    Cumulative spread trends
+                    Tendances cumulatives de propagation
                 </div>
                 <div class="itemBot">
                     @yield('graph2')
@@ -40,7 +40,7 @@
             </div>
             <div class="item">
                 <div class="itemTop">
-                    Daily spread trends
+                    Tendances quotidiennes de propagation
                 </div>
                 <div class="itemBot">
                     @yield('graph1')
@@ -52,7 +52,7 @@
         <div >
             @if ($CurCountry=='Global')
                 <div class="table_title">
-                    Statistic per country 
+                    Statistique par pays
                 </div>
                 @yield('table')
             @else

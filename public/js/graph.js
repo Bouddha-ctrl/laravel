@@ -4,7 +4,7 @@ var type=0;
 var data = document.currentScript.getAttribute('data');
 data = JSON.parse(data);
 
-var Titles = [['New cases','#fdb4b4'], ['New recovered','#a7f1be'], ['New deaths','#bdbfc1']];
+var Titles = [['Nouveaux cas','#fdb4b4'], ['Nouveaux guérisons','#a7f1be'], ['Nouveaux décès','#bdbfc1']];
 
 var ctx = document.getElementById('myChart1').getContext('2d');
 var myChart = new Chart(ctx, {

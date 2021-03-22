@@ -42,7 +42,7 @@
             </div>
 
             <span class="rank">
-                <span style="color:black;">Rank :</span> {{$rank}}
+                <span style="color:black;">Rang :</span> {{$rank}}
             </span>
 
         </div>
@@ -79,7 +79,7 @@
 
         </div>
         <div class="boxBot" id="boxBotConfirmed">
-            Confirmed
+            Confirmés
         </div>
     </div>
     <div class="box" id="recovered">
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="boxBot" id="boxBotRecovered">
-            Recovered
+            Rétablis
         </div>
     </div>
     <div class="box" id="death">
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="boxBot" id="boxBotDeath">
-            Deaths
+            Décès
         </div>
     </div>
     <div class="box" id="active">
@@ -122,7 +122,7 @@
             </div>
         </div>
         <div class="boxBot" id="boxBotActive">
-            Actives
+            Actifs
         </div>  
     </div>
 </div>  
@@ -139,9 +139,9 @@
             <form action="" id="form">
                 <select id="type"  onchange="OnSelectionChangeGraph()">
 
-                                <option class="myoption" value="0" selected>New cases</option>
-                                <option class="myoption" value="1" >New recovered</option>
-                                <option class="myoption" value="2" >New deaths</option>
+                                <option class="myoption" value="0" selected>Nouveaux cas</option>
+                                <option class="myoption" value="1" >Nouveaux guérisons</option>
+                                <option class="myoption" value="2" >Nouveaux décès</option>
 
                 </select>
             </form>
@@ -173,15 +173,15 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Country</th>
-                <th>Total Cases</th>
-                <th>New Cases</th>
-                <th>Total Deaths</th>
-                <th>New Deaths</th>
-                <th>Total Recovered</th>
-                <th>New Recovered</th>
-                <th>Active Cases</th>
-                <th>Serious_Critical</th>
+                <th>Pays</th>
+                <th>Nombre total de cas</th>
+                <th>Nouveaux cas</th>
+                <th>Nombre total de décès</th>
+                <th>Nouveaux décès</th>
+                <th>Nombre total de guérison</th>
+                <th>Nouveaux guérisons</th>
+                <th>Cas actif</th>
+                <th>Cas critique</th>
             </tr>
         </thead>
 
@@ -243,9 +243,9 @@
 @section('news')
 <div class="table_title">
     @if ($checknews =="global")
-        Global Corona virus News 
+    Les Nouvelles du covid au monde 
     @else
-        {{$CurCountry}} health News
+        Les Nouvelles de la santé  {{$CurCountry}} 
     @endif
 </div>
 <div class="BigNews">

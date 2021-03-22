@@ -20,7 +20,7 @@ var myChart = new Chart(ctx, {
         labels: data[0],
         datasets: [{
             
-            label: "Confirmed",
+            label: "Confirmé",
             data: data[1],
             fill : false,
             backgroundColor: 
@@ -33,7 +33,7 @@ var myChart = new Chart(ctx, {
             borderColor: '#fdb4b4',
         },
         {
-            label: "Recovered",
+            label: "Rétablis",
             data: data[3],
             fill : false,
             backgroundColor: 
@@ -47,7 +47,7 @@ var myChart = new Chart(ctx, {
 
         },
         {
-            label: "Deaths",
+            label: "Décès",
             data: data[2],
             fill : false,
             backgroundColor: 
@@ -61,7 +61,7 @@ var myChart = new Chart(ctx, {
 
         },
         {
-            label: "Actives",
+            label: "Actif",
             data: data[7],
             fill : false,
             backgroundColor: 
