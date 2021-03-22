@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\Http;
 use Illuminate\Support\Facades\Route;
-use App\Models\Api;
+use App\Models\api;
 
 use function PHPUnit\Framework\isEmpty;
 
@@ -38,7 +38,7 @@ class ApiController extends Controller
         'in','it','jp','kr','lt','lv','ma','mx','my','ng','nl','no','nz','ph','pl','pt','ro',
         'rs','ru','sa','se','sg','si','sk','th','tr','tw','ua','us','ve','za');
 
-        $api = new Api;
+        $api = new api;
         $iso2 = $countries[$country][1];
         if (in_array($iso2,$liste)){
             $data= array($api->getNews($iso2),"country");
