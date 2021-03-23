@@ -212,7 +212,7 @@
                 <tr>
                     <td  class="ranking_table">{{$count}}</td>
                     
-                    <td class='country_table'><a href="/country/{{$countries->Country}}"> {{$countries->Country}} </a></td>
+                    <td class='country_table'><a href="/statistiques/{{$countries->Country}}"> {{$countries->Country}} </a></td>
                     
                     <td> {{number_format ($countries->TotalCases)}} </td>
                     
@@ -307,7 +307,7 @@
 
 @section('footer')
     <div class="footer">
-
+        Copyright © 2021 Covid-19 - par une équipe de: <a href="ensah.ma">Ensah.ma</a>
     </div>
 @endsection
 
