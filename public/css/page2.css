@@ -1,32 +1,86 @@
-.logo{
-    width :58%;
-    padding-left: 20px;
-    display: flex;
-}
-
-.nav{
-    display: flex;
-    width : 38%;
-    padding-right: 10px;
-}
-.navitem{
-    padding : 10px;
-}
-
 header {
+    position: fixed;
+    z-index : 10;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width : 100%;
-    height: 1m;
+    height: 80px;
     background-color: #bfbfbf;
+    background: rgba(250,250,250,0.99);
+}
+.logo{     
+    width :50%;
+    padding-left: 120px;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #232d39;
+    transition: all 0.3s ease 0s;
+}
+.logo em{
+    padding-left:4px;
+
+    font-style: normal;
+    color: #ed563b;
+    font-weight: 900;
+}
+.nav{
+    display: flex;
+    width : 50%;
+    transform: translateX(-125px);
+
+    flex-wrap: wrap;
+}
+
+
+
+.navitem{
+    padding : 10px;
+}
+.navitem{
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+.navitem a ,.navitem a:Visited ,.navitem a:link{
+    text-decoration: none;
+    color: #232d39;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.navitem a:hover{
+    color:#ed563b;
+}
+.nav .active, .nav .active:Visited ,.nav .active:link{
+    color:#ed563b;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 body{
     margin :0;
-}
+}   
 
 main{
+    padding-top: 80px;
     background-color: #f5f5f0;
 }
 .barre{
@@ -247,6 +301,7 @@ table{
     width: 100%;
     border-collapse: collapse;
     border-spacing:0;
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 5%);
 }   
 
 th,td {

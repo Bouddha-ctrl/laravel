@@ -22,7 +22,7 @@ class ApiController extends Controller
     public function getLocation()
     {
         $ip = $_SERVER['REMOTE_ADDR'];
-        $ip = '83.56.131.20'; //spain
+        //$ip = '83.56.131.20'; //spain
         //$ip = '41.143.104.26'; //morocco
         $a=(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip))['geoplugin_countryName' ]);
         return $a;
@@ -209,7 +209,6 @@ class ApiController extends Controller
     {
         //echo $country;
         
-        $DefaultCountry = $this->getLocation();
         $DefaultCountry = 'Global';    //change , GeoIP not used
 
         if ($country=='j') {

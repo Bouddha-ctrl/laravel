@@ -1,4 +1,22 @@
-@extends('layouts/page2' )
+@extends('layouts/statistiques' )
+
+
+@section('header')
+    <div class="logo">
+        COVID-19 
+        <em> TRACKER </em>
+    </div>
+    <nav class="nav">
+        <ul>
+            <span class="navitem"><a href="/">Accueil</a></span>
+            <span class="navitem" ><a href="/statistiques" class="active">Statistiques</a></span>
+            <span class="navitem"><a href="/nouvelles">Nouvelles</a></span>
+            <span class="navitem"><a href="/aproposdenous">À propos</i></a></span>
+            <span class="navitem"><a href="/contact">Contact</a></span>
+
+        </ul>
+    </nav>
+@endsection
 
 @section('barre')
 

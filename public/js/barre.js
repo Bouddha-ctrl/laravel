@@ -9,5 +9,5 @@ function OnSelectionChangeBarre()
 
 function RedirectTo(input)
     {
-        window.location.replace("/country/"+input);
+        window.location.replace("/statistiques/"+input);
     }
