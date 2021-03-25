@@ -7,7 +7,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/frontend/css/page2.css">
     
     <link rel="stylesheet" type="text/css" href="{{asset('/frontend/css/page2.css')}}">
 
