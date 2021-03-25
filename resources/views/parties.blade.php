@@ -8,14 +8,30 @@
     </div>
     <nav class="nav">
         <ul>
-            <span class="navitem"><a href="/">Accueil</a></span>
-            <span class="navitem" ><a href="/statistiques" class="active">Statistiques</a></span>
-            <span class="navitem"><a href="/nouvelles">Nouvelles</a></span>
-            <span class="navitem"><a href="/aproposdenous">À propos</i></a></span>
-            <span class="navitem"><a href="/contact">Contact</a></span>
+            <a href="/"><span class="navitem">Accueil</a></span>
+            <a href="/statistiques" class="active"><span class="navitem">Statistiques</span></a>
+            <a href="/nouvelles"><span class="navitem">Nouvelles</span></a>
+            <a href="/aproposdenous"><span class="navitem">À propos</span></a>
+            <a href="/contact"><span class="navitem">Contact</span></a>
 
         </ul>
     </nav>
+@endsection
+
+@section('banner')
+    <div class="banner">
+        <span class="banner-filter">
+            <div class="banner-text">
+                CAS DE LA
+                <em>COVID-19</em>
+                <br/>
+                <span class="banner-text-line">
+                    Suivez la propagation de la COVID-19 à travers le monde .
+
+                </span>
+            </div>
+        </span>
+    </div>
 @endsection
 
 @section('barre')

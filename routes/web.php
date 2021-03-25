@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 
 
-
+Route::get('/test', function () {
+    return view('test');
+});
 Route::get('/nouvelles', function () {
     return view('nouvelles');
 });

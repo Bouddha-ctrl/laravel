@@ -7,7 +7,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/page2.css">
+    <link rel="stylesheet" href="/frontend/css/page2.css">
+    
+    <link rel="stylesheet" type="text/css" href="{{asset('/frontend/css/page2.css')}}">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <title>Statistique</title>
 </head>
@@ -17,7 +20,7 @@
     </header>
 
     <main>
-
+        @yield('banner')
         <div class="barre"> 
             @yield('barre')
         </div>

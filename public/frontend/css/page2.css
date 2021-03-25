@@ -21,7 +21,7 @@ header {
     color: #232d39;
     transition: all 0.3s ease 0s;
 }
-.logo em{
+em{
     padding-left:4px;
 
     font-style: normal;
@@ -47,7 +47,7 @@ header {
     padding-right: 12px;
 
 }
-.navitem a ,.navitem a:Visited ,.navitem a:link{
+.nav a ,.nav a:Visited ,.nav a:link{
     text-decoration: none;
     color: #232d39;
     font-weight: 500;
@@ -58,23 +58,48 @@ header {
     line-height: 40px;
     letter-spacing: 1px;
 }
-.navitem a:hover{
+.nav a:hover{
     color:#ed563b;
 }
 .nav .active, .nav .active:Visited ,.nav .active:link{
     color:#ed563b;
 }
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+
+
+.banner{
+    background-image: url(/frontend/images/COVID-19-Patient-3-ICU-1200x800.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+    height: 200px;
+    width: 100%;
+    zoom: 1.3;
+    background-position: 0 -250px; 
+    
 }
 
+.banner-filter{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(35,45,57,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.banner-text{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: white;
+}
+.banner-text .banner-text-line{
+    color: white;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 25px;
+}
 body{
     margin :0;
 }   
