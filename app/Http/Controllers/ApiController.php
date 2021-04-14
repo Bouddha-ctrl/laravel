@@ -21,11 +21,11 @@ class ApiController extends Controller
     ////////////////////Location/////////////////////
     public function getLocation()
     {
-        $ip = $_SERVER['REMOTE_ADDR'];
+        $ip = $_SERVER['REMOTE_ADDR']; //127.0.0.1
         //$ip = '83.56.131.20'; //spain
-        //$ip = '41.143.104.26'; //morocco
-        $a=(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip))['geoplugin_countryName' ]);
-        return $a;
+        $ip = '41.143.104.26'; //morocco
+        $CountryName=(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip))['geoplugin_countryName' ]);
+        return $CountryName;
     }
     
     /////////////////////news///////////////////////////////////
@@ -96,6 +96,7 @@ class ApiController extends Controller
         } else {
 
         }
+        //print_r($array);
         return $array;
         
     }
@@ -197,7 +198,7 @@ class ApiController extends Controller
                     $data = curl_exec($curl);
                     $json = json_decode($data);
                     curl_close($curl);
-
+            
     return $json;
     
     }
@@ -209,7 +210,7 @@ class ApiController extends Controller
     {
         //echo $country;
         
-        $DefaultCountry = 'Global';    //change , GeoIP not used
+        $DefaultCountry = 'Global';     
 
         if ($country=='j') {
             $country=$DefaultCountry;
@@ -221,7 +222,7 @@ class ApiController extends Controller
         $tableArray = $this->tableData();
         $news = $this->newsapi($country);
 
-        $MyCountry = $this->getLocation();
+        $MyCountry = $this->getLocation();   //geoplugin, ip
         
         //print_r($news);
         return view('parties', [

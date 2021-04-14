@@ -8,11 +8,8 @@
     </div>
     <nav class="nav">
         <ul>
-            <a href="/"><span class="navitem">Accueil</a></span>
-            <a href="/statistiques" class="active"><span class="navitem">Statistiques</span></a>
-            <a href="/nouvelles"><span class="navitem">Nouvelles</span></a>
-            <a href="/aproposdenous"><span class="navitem">À propos</span></a>
-            <a href="/contact"><span class="navitem">Contact</span></a>
+            <a href="/statistiques" class="active"><span class="navitem">Statistiques</span></a>  
+            <a href="/information"><span class="navitem">Information</span></a>
 
         </ul>
     </nav>
@@ -323,7 +320,7 @@
 
 @section('footer')
     <div class="footer">
-        Copyright © 2021 Covid-19 - par une équipe de: <a href="ensah.ma">Ensah.ma</a>
+        Copyright © 2021 Covid-19 - par MIRI Mohamed, Etudiant de: <a href="ensah.ma">Ensah.ma</a>
     </div>
 @endsection
 

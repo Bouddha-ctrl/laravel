@@ -43,8 +43,8 @@ em{
 }
 .navitem{
     text-decoration: none;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 20px;
 
 }
 .nav a ,.nav a:Visited ,.nav a:link{
@@ -105,7 +105,6 @@ body{
 }   
 
 main{
-    padding-top: 80px;
     background-color: #f5f5f0;
 }
 .barre{
@@ -322,7 +321,7 @@ main{
     box-sizing: border-box;
 
 }
-table{
+.table-bordered{
     width: 100%;
     border-collapse: collapse;
     border-spacing:0;
@@ -331,22 +330,22 @@ table{
     
 }   
 
-th,td {
+.table-bordered th,td {
     background-color: white;
     height: 39px;
     padding: 8px;
     font-family: noto sans,sans-serif;
     border: 1px solid rgba(0, 0, 0, 0.3);    
 }
-td{
+.table-bordered td{
     text-align: right;
     font-weight: bold;
     color : #363945;
 }
-.country_table{
+.table-bordered .country_table{
     text-align: left;   
 }
-th{
+.table-bordered th{
     color: #666666;
 }
 .ranking_table {
@@ -399,9 +398,10 @@ a:Visited , a:link{
 
 hr{
     width: 85%;
-    border-radius: 49%;
+    border-radius: 49%; 
 }
 footer{
+    clear:both;
     text-align: center;
     padding: 30px 0px;
     color: #232d39;
@@ -417,4 +417,90 @@ footer{
 }
 .footer .a:link , .footer .a:visited{
     color: #ed563b;
+}
+
+
+
+
+.header-space{
+    height:  80px;
+    width: 100%;
+}
+.info_container{
+    
+    margin : 2% 9% 0 9%;
+    padding: 3%;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+
+.info_container h3{
+    padding : 1%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.code{
+    padding : 1%;
+    margin : 1% 0 1% 0;
+    background-color: grey;
+    color : #718096;
+    display: block;
+    background-color: rgba(237,242,247);
+    border-radius: 6px;
+    font-size: .95rem;
+}
+
+.icon{
+    background-color: #667eea;
+    padding : 4 8 4 8;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 700;
+    border-radius: .25rem;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.information-personnel{
+    width: 70%;
+    float: left;
+}
+.devlopper{
+    height: 190px;
+}
+.photo{
+    padding-top: 15px;
+    width: 30%;
+    float:right;
+    align-items: center;
+
+}
+.info_container li{
+    font-family: noto sans,sans-serif;
+    font-weight: bold;
+    color : #363945;
+
+}
+.information-table td{
+    text-align: left;
+    border: 0;
+    font-family: noto sans,sans-serif;
+    font-weight: bold;
+    color : #363945;
+
+}
+
+.img{
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    zoom: 1.1;
 }

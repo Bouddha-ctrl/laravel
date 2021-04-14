@@ -4,7 +4,7 @@ var data = document.currentScript.getAttribute('data');
 data = JSON.parse(data);
 
 var ctx = document.getElementById('myChart2').getContext('2d');
-
+//console.log(data[1])
 var myChart = new Chart(ctx, {
     plugins: [{
         beforeInit: function(chart, options) {

@@ -17,7 +17,8 @@
     <header class="site-header"> 
         @yield('header')
     </header>
-
+    
+    <div class="header-space"></div>
     <main>
         @yield('banner')
         <div class="barre"> 
