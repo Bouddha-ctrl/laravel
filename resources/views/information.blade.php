@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{{asset('/frontend/css/page2.css')}}">
+        <link rel="stylesheet" type="text/css" href="/frontend/css/page2.css">
         <title>General infromation</title>
     </head>
     <body style="background-color: #f5f5f0">
@@ -35,7 +35,7 @@
                     <img class="img" src="frontend/images/myphoto.jpg" alt="myphoto"/>
                 </div>
             </div>
-            
+
             <hr/> 
             <h3>API utilisé </h3>
             <hr/>   
