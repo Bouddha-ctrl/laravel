@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/information', function () {
     return view('information');
 });
+Route::get('/', function () {
+    return redirect('/statistiques');
+});
 
 
 Route::get('/statistiques/{country}', 'App\Http\Controllers\ApiController@main');
 Route::get('/statistiques', 'App\Http\Controllers\ApiController@main');
 
 
-Route::get('/layout', function () {
-    return view('layouts/statistiques');
-});
