@@ -83,6 +83,7 @@ class ApiController extends Controller
             ],
         ]);
         
+        /*
         $response = curl_exec($curl);
         $err = curl_error($curl);
         $ss =json_decode($response);
@@ -96,7 +97,8 @@ class ApiController extends Controller
         } else {
 
         }
-        //print_r($array);
+        //print_r($array);*/
+        $array = [];
         return $array;
         
     }
@@ -194,11 +196,12 @@ class ApiController extends Controller
             ],
         ]);
         
-        
+        /*
                     $data = curl_exec($curl);
                     $json = json_decode($data);
                     curl_close($curl);
-            
+            */
+            $json=[]
     return $json;
     
     }
