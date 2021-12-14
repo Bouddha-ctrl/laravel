@@ -86,7 +86,7 @@ class ApiController extends Controller
         
         $response = curl_exec($curl);
         $err = curl_error($curl);
-        $ss =json_decode($response);
+        $ss =json_decode($response,true);
         $ss=$ss[0];
         $array = json_decode(json_encode($ss), true);
 
